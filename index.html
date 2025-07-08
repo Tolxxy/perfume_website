@@ -48,10 +48,71 @@
         
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 md:w-6 lg:w-6 text-gray-700">
                 <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z">
-                </path>
+                </path>5
             </svg>
         </div>
     </div>
+
+<!-- THIS IS THE HERO SECTION -->
+ <section class="relative w-full h-[40em] overflow-hidden">
+  <!-- Background Image -->
+  <img src="./Images/header-image.jpg" alt="Perfume Hero Image" 
+       class="absolute  w-full h-[30em] md:h-full object-cover object-[60%] md:object-[75%] lg:object-[85%] bg-gradient-to-t from-black/60 to-transparent" />
+
+       <div class="div absolute flex flex-col gap-5 top-[45%] left-[6em] ">
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold">CATCHY CONTEXT</h1>
+
+    <!-- Subtext -->
+    <p class="text-sm leading-relaxed max-w-md mx-auto text-center md:mx-0 md:text-left">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> 
+      sed do eiusmod tempor incididunt ut labore et
+    </p>
+
+    <!-- Button -->
+    <a href="#" class="bg-black text-[#FFC49C] hover:text-black text-sm px-6 py-2 md:px-10 md:py-4 font-bold rounded-lg w-fit hover:bg-gray-200">
+      SHOP NOW
+    </a>
+       </div>
+       <!-- Heading -->
     
+
+  <!-- Overlay (Text Content) -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r md:from-black/60 md:to-transparent flex flex-col items-center justify-center md:items-start md:justify-center md:text-left px-4 md:px-16 text-white space-y-4 hidden">
+    
+  </div>
+</section>
+
+<section class="px-4 md:px-16 py-12 bg-white">
+  <!-- Section Heading -->
+  <h2 class="text-2xl md:text-3xl  font-semibold text-black mb-8">
+    OUR <span class="text-[#FFAD84]">COLLECTION</span>
+  </h2>
+
+  <!-- Product Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    
+    <!-- Product Card -->
+    <div class="bg-gray-50 p-4 rounded-lg shadow">
+      <img src="./Images/product-image.jpg" alt="Perfume" class="w-full h-30 object-cover rounded-md mb-4" />
+      <h3 class="text-sm font-medium text-gray-800">Tolxxy Touch</h3>
+      <p class="text-sm text-gray-600 mb-3">$12</p>
+      <button class="bg-black text-white text-sm px-4 py-2 rounded w-full hover:bg-gray-800">
+        Add to Cart
+      </button>
+    </div>
+    <!-- Product Card -->
+    <div class="bg-gray-50 p-4 rounded-lg shadow">
+      <img src="./Images/product-image.jpg" alt="Perfume" class="w-full h-30 object-cover rounded-md mb-4" />
+      <h3 class="text-sm font-medium text-gray-800">Scent Touch</h3>
+      <p class="text-sm text-gray-600 mb-3">$122</p>
+      <button class="bg-black text-white text-sm px-4 py-2 rounded w-full hover:bg-gray-800">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
 </body>
 </html>
