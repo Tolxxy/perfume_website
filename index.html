@@ -1,63 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALOMALUX</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOMALUX</title>
+  <script src="./index.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONT  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-gradient-to-r from-white to-[#FFC49C2E]">
-<!-- THIS IS THE HEADER SECTION  -->
-    <div class="header w-full px-2 py-5 flex justify-between md:px-5 md:py-10 lg:px-24 lg:py-8" >
-
-        <div class="flex gap-5">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 md:hidden lg:hidden">
-               <path d="M16 18V20H5V18H16ZM21 11V13H3V11H21ZM19 4V6H8V4H19Z">
-               </path>
-            </svg>
-<!-- THIS IS THE LOGO SECTION -->
-            <div class="logo">
-              <img src="./Images/aroomalux logo.svg" alt="" class="w-28">
-            </div>
-        </div>
-<!-- THIS IS THE NAVIGATION SECTION -->
-        <div class="nav-link hidden md:flex">
-            <ul class="flex gap-12 md:gap-8 text-sm font-semibold md:items-center">
-                <li><a href="#" class="border-b-4 border-[#FFC49C] pb-2 text-[#FFC49C]">HOME</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FFC49C] transition-all duration-300">COLLECTION</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FFC49C] transition-all duration-300">ABOUT</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FFC49C] transition-all duration-300">CONTACT</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FFC49C] transition-all duration-300">GIFT</a></li>
-            </ul>
-        </div>
-<!-- THIS IS THE CART SECTION -->
-        <div class="cart  flex gap-5">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 md:w-6 lg:w-6 text-gray-700">
+<body class="font-[Pontano Sans] bg-gradient-to-r from-white to-[#FFC49C2E] h-screen">
+  <header class="bg-white">
+    <nav class="flex justify-between items-center w-full p-[1em] py-[1.6em]">
+      <div class="flex items-center gap-5">
+        <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        <img class="w-28" src="./Images/aroomalux logo.svg" alt="...">
+      </div>
+      <div class="nav-links duration-500 md:static absolute bg-red-500 md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full items-center px-5 z-50">
+        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+          <li>
+            <a class="hover:text-[#FFC49C]" href="#">HOME</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="#">COLLECTION</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="#">ABOUT</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="#">CONTACT</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="#">GIFT</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex gap-5 items-center">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 md:w-6 lg:w-6 text-gray-700">
                 <path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z">
                 </path>
             </svg>
         
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 md:w-6 lg:w-6 text-gray-700">
                 <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z">
-                </path>5
+                </path>
             </svg>
-        </div>
-    </div>
+      </div>
+    </nav>
+  </header>
 
-<!-- THIS IS THE HERO SECTION -->
+  <!-- THIS IS THE HERO SECTION -->
  <section class="relative w-full h-[40em] overflow-hidden">
   <!-- Background Image -->
   <img src="./Images/header-image.jpg" alt="Perfume Hero Image" 
-       class="absolute  w-full h-[30em] md:h-full object-cover object-[60%] md:object-[75%] lg:object-[85%] bg-gradient-to-t from-black/60 to-transparent" />
+       class="absolute 20 w-full h-[30em] md:h-full object-cover object-[60%] md:object-[75%] lg:object-[85%] bg-gradient-to-t from-black/60 to-transparent" />
 
        <div class="div absolute flex flex-col gap-5 top-[45%] left-[6em] ">
         <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold">CATCHY CONTEXT</h1>
@@ -72,46 +73,131 @@
     <a href="#" class="bg-black text-[#FFC49C] hover:text-black text-sm px-6 py-2 md:px-10 md:py-4 font-bold rounded-lg w-fit hover:bg-gray-200">
       SHOP NOW
     </a>
-       </div>
-       <!-- Heading -->
-    
+</div>
+</section>
 
-  <!-- Overlay (Text Content) -->
-  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r md:from-black/60 md:to-transparent flex flex-col items-center justify-center md:items-start md:justify-center md:text-left px-4 md:px-16 text-white space-y-4 hidden">
+
+  <!-- Collection Section -->
+  <section class="px-4 py-10 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-widest mb-8">OUR COLLECTION</h2>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Single Product Card -->
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image1.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Tolxxy Touch</p>
+        <p class="text-black font-medium text-sm">$12</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image2.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Scent Touch</p>
+        <p class="text-black font-medium text-sm">$122</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image3.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Elegance Touch</p>
+        <p class="text-black font-medium text-sm">$22</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image4.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Smell Essence</p>
+        <p class="text-black font-medium text-sm">$10</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image5.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Perf' due Scent</p>
+        <p class="text-black font-medium text-sm">$20</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image6.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Perfume la Hot</p>
+        <p class="text-black font-medium text-sm">$42</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image7.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Tolxxy Secret</p>
+        <p class="text-black font-medium text-sm">$32</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+
+      <div class="bg-gray-100 rounded-xl shadow p-4 flex flex-col items-center">
+        <img src="./Images/product-image8.jpg" alt="Perfume" class="h-64 md:h-40 w-full object-cover rounded-md mb-3"/>
+        <p class="text-gray-700 text-sm">Touch Seduction</p>
+        <p class="text-black font-medium text-sm">$110</p>
+        <button class="mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- SEE MORE BUTTON -->
+    <div class="mt-8 flex justify-center">
+      <button class="border border-black px-6 py-2 text-sm rounded hover:bg-white hover:text-[#FFC49C] transition duration-200">
+        SEE MORE
+      </button>
+    </div>
+  </section>
+
+
+  <section class="bg-white py-10 px-4 md:px-10 lg:px-20">
+  <div class="max-w-6xl mx-auto bg-[#FFF3EC] rounded-md overflow-hidden flex flex-col lg:flex-row items-center gap-8">
     
+    <!-- Image -->
+    <div class="w-full lg:w-1/2">
+      <img 
+        src="./Images/about-us-image.jpg" 
+        alt="About Us Image"
+        class="w-full h-[25em] object-cover rounded-lg"
+      />
+    </div>
+
+    <!-- Text Content -->
+    <div class="w-full lg:w-1/2 px-4 pb-8">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4 tracking-widest">ABOUT US</h2>
+      <p class="text-gray-800 text-base leading-relaxed mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      </p>
+      <button class="bg-[#6B3B17] text-white px-6 py-2 rounded-md text-sm tracking-wide hover:bg-[#4f2d12] transition">
+        LEARN MORE
+      </button>
+    </div>
+
   </div>
 </section>
 
-<section class="px-4 md:px-16 py-12 bg-white">
-  <!-- Section Heading -->
-  <h2 class="text-2xl md:text-3xl  font-semibold text-black mb-8">
-    OUR <span class="text-[#FFAD84]">COLLECTION</span>
-  </h2>
+<footer class="bg-white py-10 px-4">
+  <div class="flex flex-col items-center space-y-6 text-center">
 
-  <!-- Product Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    
-    <!-- Product Card -->
-    <div class="bg-gray-50 p-4 rounded-lg shadow">
-      <img src="./Images/product-image.jpg" alt="Perfume" class="w-full h-30 object-cover rounded-md mb-4" />
-      <h3 class="text-sm font-medium text-gray-800">Tolxxy Touch</h3>
-      <p class="text-sm text-gray-600 mb-3">$12</p>
-      <button class="bg-black text-white text-sm px-4 py-2 rounded w-full hover:bg-gray-800">
-        Add to Cart
-      </button>
-    </div>
-    <!-- Product Card -->
-    <div class="bg-gray-50 p-4 rounded-lg shadow">
-      <img src="./Images/product-image.jpg" alt="Perfume" class="w-full h-30 object-cover rounded-md mb-4" />
-      <h3 class="text-sm font-medium text-gray-800">Scent Touch</h3>
-      <p class="text-sm text-gray-600 mb-3">$122</p>
-      <button class="bg-black text-white text-sm px-4 py-2 rounded w-full hover:bg-gray-800">
-        Add to Cart
-      </button>
-    </div>
+    <!-- Logo -->
+    <img src="./Images/aroomalux logo.svg" alt="Aromalux Logo" class="w-32 md:w-36" />
+
+    <!-- Navigation Links -->
+    <nav class="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium">
+      <a href="#" class="text-black hover:text-gray-700">HOME</a>
+      <a href="#" class="text-black hover:text-gray-700">COLLECTION</a>
+      <a href="#" class="text-black hover:text-gray-700">ABOUT</a>
+      <a href="#" class="text-black hover:text-gray-700">CONTACT</a>
+      <a href="#" class="text-black hover:text-gray-700">GIFT</a>
+    </nav>
+
+    <!-- Copyright -->
+    <p class="text-sm text-gray-600">Copyright - 2025</p>
 
   </div>
-</section>
+</footer>
 
 
 </body>
