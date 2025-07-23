@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOMALUX</title>
+  <script src="./index.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONT  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body class="font-[Pontano Sans] bg-gradient-to-r from-white to-[#FFC49C2E] h-screen">
+  <header class="bg-white w-full fixed top-0 left-0 z-50 shadow-md">
+    <nav class="flex justify-between items-center w-full p-[1em] py-[1.6em] lg:px-[6em]">
+      <div class="flex items-center gap-5">
+        <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        <img class="w-28" src="./Images/aroomalux logo.svg" alt="...">
+      </div>
+      <div class="nav-links duration-500 md:static absolute md:min-h-fit left-0 top-[-100vh] md:w-auto w-full items-center z-50">
+        <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] h-full bg-white lg:bg-none gap-8 lg:text-sm p-5">
+          <li>
+            <a class="hover:text-[#FFC49C]" href="index.html">HOME</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="collection.html">COLLECTION</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="about.html">ABOUT</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C]" href="contact.html">CONTACT</a>
+          </li>
+          <li>
+            <a class="hover:text-[#FFC49C] text-[#FFC49C] font-bold" href="gift.html">GIFT</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex gap-7 items-center">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 md:w-6 lg:w-6 text-gray-700" id="search-icon">
+                <path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z">
+                </path>
+            </svg>
+        
+            <a href="" class="relative inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"  class="w-6 lg:w-6  text-gray-700">
+                        <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z">
+                        </path>
+                    </svg>
+                    <span id="cart-count" class="absolute -top-1 -right-2 bg-red-500 text-white text-[10px] px-[5px] rounded-full">
+                        
+                    </span>
+                </a>
+      </div>
+    </nav>
+  </header>
+
+<!-- Hero Section -->
+<section class="relative w-full h-[20em] md:h-[25em] bg-cover bg-center flex items-center justify-center text-center" style="background-image: url('./Images/gift-hero.jpg'); margin-top: 5rem;">
+  <div class="bg-[#FFC49C] w-full h-full flex flex-col justify-center items-center text-black px-6">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Give the Gift of Luxury</h1>
+    <p class="text-lg md:text-xl mb-6">Perfect fragrances for every special moment</p>
+    <a href="#gift-sets" class="bg-black text-white font-semibold px-6 py-3 rounded-md hover:bg-[#e0a878]">Shop Gift Sets</a>
+  </div>
+</section>
+
+<!-- Gift Categories -->
+<section class="max-w-7xl mx-auto px-6 py-12 text-center">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-8 tracking-widest">GIFT CATEGORIES</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="bg-[#FFF3EC] p-6 rounded-lg shadow hover:scale-105 transition">
+      <img src="./Images/gift-male (1).jpg" alt="For Him" class="rounded-md mb-4 w-full h-36 md:h-40 lg:h-52 object-cover">
+      <p class="font-medium">For Him</p>
+    </div>
+    <div class="bg-[#FFF3EC] p-6 rounded-lg shadow hover:scale-105 transition">
+      <img src="./Images/gift-female.jpg" alt="For Her" class="rounded-md mb-4 w-full h-36 md:h-40 lg:h-52 object-cover">
+      <p class="font-medium">For Her</p>
+    </div>
+    <div class="bg-[#FFF3EC] p-6 rounded-lg shadow hover:scale-105 transition">
+      <img src="./Images/gift-unisex.jpg" alt="Unisex" class="rounded-md mb-4 w-full h-36 md:h-40 lg:h-52 object-cover">
+      <p class="font-medium">Unisex</p>
+    </div>
+    <div class="bg-[#FFF3EC] p-6 rounded-lg shadow hover:scale-105 transition">
+      <img src="./Images/product-image15.jpeg" alt="Special Occasions" class="rounded-md mb-4 w-full h-36 md:h-40 lg:h-52 object-cover">
+      <p class="font-medium">Special Occasions</p>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Gift Sets -->
+<section id="gift-sets" class="max-w-7xl mx-auto px-6 py-12">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-8 tracking-widest text-center">POPULAR GIFT SETS</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Gift Card -->
+    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img src="./Images/luxury duo set.jpeg" alt="Luxury Duo Set" class="rounded-md w-full h-96 md:h-52 lg:h-64 object-cover mb-3">
+      <p class="text-gray-700 font-medium mb-1">Luxury Duo Set</p>
+      <p class="text-black font-bold mb-2">$59</p>
+      <button class="add-to-cart mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full" data-name="Luxury Duo Set" data-price="59">Add to Cart</button>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img src="./Images/aroma deluxe.jpeg" alt="Aroma Deluxe" class="rounded-md w-full h-96 md:h-52 lg:h-64 object-cover mb-3">
+      <p class="text-gray-700 font-medium mb-1">Aroma Deluxe</p>
+      <p class="text-black font-bold mb-2">$75</p>
+      <button class="add-to-cart mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full" data-name="Aroma Deluxe" data-price="75">Add to Cart</button>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img src="./Images/elegant trio.jpeg" alt="Elegant Trio" class="rounded-md w-full h-96 md:h-52 lg:h-64 object-cover mb-3">
+      <p class="text-gray-700 font-medium mb-1">Elegant Trio</p>
+      <p class="text-black font-bold mb-2">$99</p>
+      <button class="add-to-cart mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full" data-name="Elegant Trio" data-price="99">Add to Cart</button>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+      <img src="./Images/classic combo.jpeg" alt="Classic Combo" class="rounded-md w-full h-96 md:h-52 lg:h-64 object-cover mb-3">
+      <p class="text-gray-700 font-medium mb-1">Classic Combo</p>
+      <p class="text-black font-bold mb-2">$65</p>
+      <button class="add-to-cart mt-2 bg-black text-[#FFC49C] text-sm py-2 px-4 rounded-2xl w-full" data-name="Classic Combo" data-price="65">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="bg-[#FFC49C] flex flex-col gap-6 text-black py-10 text-center mt-12 justify-center items-center">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-4">Celebrate Every Moment with AromaLux</h2>
+  <a href="collection.html" class="w-[15em] bg-black text-[#FFC49C] px-6 py-3 rounded-md font-medium hover:bg-gray-800">Explore All Gifts</a>
+</section>
+
+<footer class="bg-white py-10 px-4">
+  <div class="flex flex-col items-center space-y-6 text-center">
+
+    <!-- Logo -->
+    <img src="./Images/aroomalux logo.svg" alt="Aromalux Logo" class="w-32 md:w-36" />
+
+    <!-- Navigation Links -->
+    <nav class="flex flex-wrap justify-center gap-6 text-sm md:text-base font-medium">
+      <a href="index.html" class="text-black hover:text-gray-700">HOME</a>
+      <a href="collection.html" class="text-black hover:text-gray-700">COLLECTION</a>
+      <a href="about.html" class="text-black hover:text-gray-700">ABOUT</a>
+      <a href="contact.html" class="text-black hover:text-gray-700">CONTACT</a>
+      <a href="gift.html" class="text-black hover:text-gray-700">GIFT</a>
+    </nav>
+
+    <!-- Copyright -->
+    <p class="text-sm text-gray-600">Copyright - 2025</p>
+
+  </div>
+</footer>
+
+</body>
+
+
+<!-- CART SIDEBAR -->
+<div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+  <!-- Header -->
+  <div class="p-4 border-b flex justify-between items-center">
+    <h2 class="text-lg font-bold">Your Cart</h2>
+    <button id="close-cart" class="text-gray-600 hover:text-black text-2xl">&times;</button>
+  </div>
+
+  <!-- Items -->
+  <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-4">
+    <!-- Dynamically added items will go here -->
+  </div>
+
+  <!-- Footer -->
+  <div class="p-4 border-t">
+    <p class="font-semibold mb-3">Total: $<span id="cart-total">0</span></p>
+    <button class="bg-black text-[#FFC49C] w-full py-3 rounded-lg hover:bg-gray-800">Checkout</button>
+  </div>
+</div>
+</html>

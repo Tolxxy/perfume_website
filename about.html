@@ -24,7 +24,7 @@
       <div class="nav-links duration-500 md:static absolute md:min-h-fit left-0 top-[-100vh] md:w-auto w-full items-center z-50">
         <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] h-full bg-white lg:bg-none gap-8 lg:text-sm p-5">
           <li>
-            <a class="hover:text-[#FFC49C] " href="index.html">HOME</a>
+            <a class="hover:text-[#FFC49C]" href="index.html">HOME</a>
           </li>
           <li>
             <a class="hover:text-[#FFC49C]" href="collection.html">COLLECTION</a>
@@ -33,10 +33,10 @@
             <a class="hover:text-[#FFC49C] text-[#FFC49C] font-bold" href="about.html">ABOUT</a>
           </li>
           <li>
-            <a class="hover:text-[#FFC49C]" href="#">CONTACT</a>
+            <a class="hover:text-[#FFC49C]" href="contact.html">CONTACT</a>
           </li>
           <li>
-            <a class="hover:text-[#FFC49C]" href="#">GIFT</a>
+            <a class="hover:text-[#FFC49C]" href="gift.html">GIFT</a>
           </li>
         </ul>
       </div>
@@ -59,20 +59,37 @@
     </nav>
   </header>
 
-   <div id="search" class="search w-full bg-red-400 absolute -top-32 left-0 z-50 transition-all duration-400">
-    <div class="flex items-center bg-blue-300">
-      <div class="bg-white p-10 rounded-lg shadow-lg w-full flex items-center gap-4">
-        <input type="text" placeholder="Search..." class="w-full p-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FFC49C]">
-         <!-- <ion-icon onclick="onToggleMenu(this)" name="close-outline" class="text-3xl cursor-pointer"></ion-icon> -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6" id="cancel">
-            <path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z">
-          </path>
-        </svg>
-      </div>
-    </div>  
-  </div>
+  <!-- HERO SECTION -->
+  <section class="relative w-full h-[15em] flex items-center justify-center bg-cover bg-center">
+    <div class="bg-red-500 w-full h-full absolute"></div>
+    <h1 class="flex items-center justify-center text-4xl md:text-5xl font-bold z-10 text-center">About AromaLux</h1>
+  </section>
 
-  <h1 class="text-[35vmin]">About Toluwalope</h1>
+  <!-- ABOUT CONTENT -->
+  <section class="max-w-6xl mx-auto px-6 py-16 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Image -->
+    <div>
+      <img src="./Images/about us img 1 (1).jpeg" alt="AromaLux Perfume" class="rounded-lg shadow-md w-full">
+    </div>
+
+    <!-- Text Content -->
+    <div>
+      <h2 class="text-3xl font-semibold mb-6">Our Story</h2>
+      <p class="text-gray-700 mb-4">
+        AromaLux was born from a passion for elegance and sophistication in everyday scents. We believe fragrance should be more than just a luxury—it should be a part of your identity.
+      </p>
+      <p class="text-gray-700 mb-4">
+        Our collection blends modern creativity with timeless classics, offering perfumes and home fragrances crafted to leave a lasting impression.
+      </p>
+      <p class="text-gray-700">
+        Whether you’re heading to work, relaxing at home, or celebrating life’s big moments, AromaLux is here to make every experience unforgettable.
+      </p>
+      <button class="mt-6 bg-black text-[#FFC49C] font-bold px-6 py-3 rounded-md hover:bg-gray-800 transition">Explore Our Collection</button>
+       <!-- <a href="collection.html" class="mt-6 bg-black text-[#FFC49C] font-bold px-6 py-2 rounded-md hover:bg-gray-800 transition">
+          Explore Our Collection -->
+        </a>
+    </div>
+  </section>
 
   <footer class="bg-white py-10 px-4">
   <div class="flex flex-col items-center space-y-6 text-center">
@@ -93,7 +110,7 @@
     <p class="text-sm text-gray-600">Copyright - 2025</p>
 
   </div>
-</footer>
+</footer> 
 
-  </body>
-  </html>
+</body>
+</html>
